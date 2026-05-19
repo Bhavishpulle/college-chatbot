@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>EduBot – AI College Enquiry | People University</title>
+  <meta name="description" content="AI-powered college enquiry chatbot. Get instant answers on admissions, courses, fees, hostel, placements and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <div class="shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sb-head">
+        <div class="brand">
+          <div class="brand-icon">🏛️</div>
+          <div>
+            <div class="brand-name">People</div>
+            <div class="brand-sub">University · EduBot</div>
+          </div>
+        </div>
+        <button class="icon-btn sb-close" id="sbClose">✕</button>
+      </div>
+
+      <p class="sb-label">Ask About</p>
+      <nav class="sb-nav" id="sbNav">
+        <button class="nb" data-q="What are the admission requirements?" data-id="admissions">🎓 Admissions</button>
+        <button class="nb" data-q="What are the B.Tech specializations?" data-id="btech">🖥️ B.Tech Specializations</button>
+        <button class="nb" data-q="What are the MBA specializations?" data-id="mba">📊 MBA Specializations</button>
+        <button class="nb" data-q="What is the complete fee structure?" data-id="fees">💳 Fee Structure</button>
+        <button class="nb" data-q="Tell me about hostel and accommodation" data-id="hostel">🏠 Hostel & Accommodation</button>
+        <button class="nb" data-q="What scholarships are available?" data-id="scholarships">🏆 Scholarships</button>
+        <button class="nb" data-q="Tell me about placements and packages" data-id="placements">💼 Placements & Packages</button>
+        <button class="nb" data-q="What campus facilities are available?" data-id="facilities">🏛️ Campus Facilities</button>
+        <button class="nb" data-q="Tell me about the faculty and departments" data-id="faculty">👩‍🏫 Faculty & Departments</button>
+        <button class="nb" data-q="What is the exam and grading policy?" data-id="exams">📝 Exams & Results</button>
+        <button class="nb" data-q="Tell me about student clubs and activities" data-id="activities">🎭 Clubs & Activities</button>
+        <button class="nb" data-q="Tell me about research and internships" data-id="research">🔬 Research & Internships</button>
+        <button class="nb" data-q="How can I contact the university?" data-id="contact">📞 Contact Us</button>
+      </nav>
+
+      <div class="sb-stats">
+        <p class="sb-label">At a Glance</p>
+        <div class="stat-grid">
+          <div class="stat"><span class="sn">NAAC</span><span class="sl">A++ Grade</span></div>
+          <div class="stat"><span class="sn">18K+</span><span class="sl">Students</span></div>
+          <div class="stat"><span class="sn">95%</span><span class="sl">Placement</span></div>
+          <div class="stat"><span class="sn">52 yrs</span><span class="sl">Legacy</span></div>
+        </div>
+      </div>
+
+      <div class="sb-foot">
+        <span class="dot-green"></span> EduBot is online
+      </div>
+    </aside>
+
+    <!-- CHAT -->
+    <main class="chat">
+      <header class="chat-head">
+        <div class="ch-left">
+          <button class="icon-btn menu-btn" id="menuBtn">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="bot-ava">👩‍🎓</div>
+          <div>
+            <div class="ch-name">EduBot <span class="badge">AI</span></div>
+            <div class="ch-status"><span class="dot-green"></span> Always online · Instant replies</div>
+          </div>
+        </div>
+        <div class="ch-right">
+          <button class="pill-btn" id="clearBtn">🗑 Clear</button>
+          <button class="pill-btn accent" id="helpBtn">❓ Help</button>
+        </div>
+      </header>
+
+      <div class="messages" id="messages" role="log" aria-live="polite"></div>
+
+      <div class="chips-row" id="chips">
+        <button class="chip" data-q="What is the B.Tech CSE fee?">💳 B.Tech Fees</button>
+        <button class="chip" data-q="CSE specializations available?">🖥 CSE Specs</button>
+        <button class="chip" data-q="What is the highest placement package?">💼 Top Package</button>
+        <button class="chip" data-q="Hostel fee and facilities?">🏠 Hostel</button>
+        <button class="chip" data-q="Merit scholarship eligibility?">🏆 Scholarship</button>
+        <button class="chip" data-q="Application last date?">📅 Apply Date</button>
+        <button class="chip" data-q="List all MBA specializations">📊 MBA Specs</button>
+      </div>
+
+      <div class="input-bar">
+        <div class="input-wrap">
+          <textarea id="inp" placeholder="Type your question… e.g. 'What is B.Tech CSE fee per year?'" rows="1" aria-label="Your message"></textarea>
+          <button id="sendBtn" class="send-btn" aria-label="Send">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+        <div class="input-foot">
+          <span>Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> new line</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- INFO PANEL -->
+    <aside class="info" id="info">
+      <div class="info-head">
+        <span>📋 Quick Reference</span>
+        <button class="icon-btn" id="infoClose">✕</button>
+      </div>
+      <div class="info-body" id="infoBody">
+        <div class="info-placeholder">
+          <div class="ip-icon">📖</div>
+          <p>Select a topic or ask EduBot a question — detailed reference info will appear here.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
